@@ -1,7 +1,11 @@
+-- local trouble = require("trouble.providers.telescope")
+
 require('telescope').setup{
   defaults = {
     -- Default configuration for telescope goes here:
     -- config_key = value,
+      -- i = { ["<c-t>"] = trouble.open_with_trouble },
+      -- n = { ["<c-t>"] = trouble.open_with_trouble },
   },
   pickers = {
     -- Default configuration for builtin pickers goes here:

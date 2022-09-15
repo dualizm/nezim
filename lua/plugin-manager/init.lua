@@ -16,6 +16,9 @@ return require('packer').startup(function(use)
       'kyazdani42/nvim-web-devicons', -- optional, for file icons
     }}
 
+--[[ GIT ]]--
+  use 'TimUntersberger/neogit'
+
 --[[ COMMENTER ]]--
 use {
   -- Neovim treesitter plugin for setting 
@@ -25,7 +28,7 @@ use {
 
   -- A comment toggler for Neovim, written in Lua  
   'terrortylor/nvim-comment',
-} 
+}
 
 --[[ ALIGN ]]--
   use 'Vonr/align.nvim'
@@ -81,8 +84,11 @@ use {
 --[[ NVIM-TREE-SITTER ]]--
   -- Nvim Treesitter configurations and abstraction layer
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
----[[ MODULES
-  use 'nvim-treesitter/nvim-treesitter-context'
+---[[ MODULES-NVIM-TREE-SITTER
+use {
+  'nvim-treesitter/nvim-treesitter-context',
+  'andrewferrier/textobj-diagnostic.nvim',
+}
 --]]
 
 --[[ LSP ]]--
@@ -113,7 +119,17 @@ use {
   'lukas-reineke/indent-blankline.nvim',
 
   -- Rainbow parentheses for neovim using tree-sitter
-  'p00f/nvim-ts-rainbow'
+  'p00f/nvim-ts-rainbow',
+
+  -- (Neo)Vim plugin for automatically highlighting other 
+  -- uses of the word under the cursor using either LSP,
+  -- Tree-sitter, or regex matching. 
+  'RRethy/vim-illuminate',
+
+  -- A pretty diagnostics, references, telescope results,
+  -- quickfix and location list to help you solve all 
+  -- the trouble your code is causing. 
+  'folke/trouble.nvim'
 }
 
 end)
