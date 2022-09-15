@@ -6,8 +6,8 @@ vim.g.mapleader = ' '
 
 --[[ SAVE ]]--
 ---[[
-  bind('n', '<f2>', '<esc>:w<cr>', opts)
-  bind('i', '<f2>', '<esc>:w<cr>', opts)
+  bind('n', '<f2>', '<esc>:wall<cr>', opts)
+  bind('i', '<f2>', '<esc>:wall<cr>', opts)
   bind('n', '<f10>', '<esc>:xall<cr>', opts)
   bind('i', '<f10>', '<esc>:xall<cr>', opts)
 --]]
@@ -32,6 +32,17 @@ vim.g.mapleader = ' '
   bind('n', '<f6>', ':bn<cr>', opts)
 --]]
 
+--[[ NEOGIT ]]--
+---[[
+  bind('n', '<f4>', ':Neogit<cr>', opts)
+--]]
+
+--[[ TROUBLE ]]--
+---[[
+  bind('n', '<f3>', ':TroubleToggle<cr>', opts)
+  bind('i', '<f3>', '<esc>:TroubleToggle<cr>', opts)
+--]]
+
 --[[ ALIGN ]]--
 ---[[
   vbind('x', 'aa', function() require'align'.align_to_char(1, true)             end, opts) -- Aligns to 1 character, looking left
@@ -42,7 +53,7 @@ vim.g.mapleader = ' '
   vbind('x', 'at', function() require'align'.align_to_string(false, false, false) end, opts) -- Aligns to a string, looking left and with previews
 --]]
 
---[[ Telescope ]]--
+--[[ TELESCOPE ]]--
 ---[[
   bind('n', '<leader>ff', '<cmd>Telescope find_files<cr>', opts)
   bind('n', '<leader>fg', '<cmd>Telescope live_grep<cr>', opts)
@@ -50,7 +61,7 @@ vim.g.mapleader = ' '
   bind('n', '<leader>fh', '<cmd>Telescope help_tags<cr>', opts)
 --]]
 
---[[ NvimTree ]]--
+--[[ NVIMTREE ]]--
   bind('n', '<leader>n', ':NvimTreeToggle<cr>', opts)
 
 --[[ LSP ]]--

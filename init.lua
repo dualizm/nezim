@@ -17,3 +17,10 @@ require('plugin-config.mason')
 require('plugin-config.nvim-cmp')
 require('plugin-config.tree-sitter')
 require('plugin-config.ts-rainbow')
+require('plugin-config.illuminate')
+require('plugin-config.diagnostic')
+require('plugin-config.trouble')
+require('plugin-config.neogit')
+
+-- TODO
+-- Configure Conjure

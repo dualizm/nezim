@@ -214,10 +214,20 @@ _G.packer_plugins = {
     path = "/home/nim/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["textobj-diagnostic.nvim"] = {
+    loaded = true,
+    path = "/home/nim/.local/share/nvim/site/pack/packer/start/textobj-diagnostic.nvim",
+    url = "https://github.com/andrewferrier/textobj-diagnostic.nvim"
+  },
   ["vim-colors-paramount"] = {
     loaded = true,
     path = "/home/nim/.local/share/nvim/site/pack/packer/start/vim-colors-paramount",
     url = "https://github.com/owickstrom/vim-colors-paramount"
+  },
+  ["vim-illuminate"] = {
+    loaded = true,
+    path = "/home/nim/.local/share/nvim/site/pack/packer/start/vim-illuminate",
+    url = "https://github.com/RRethy/vim-illuminate"
   },
   ["vim-jack-in"] = {
     loaded = true,
