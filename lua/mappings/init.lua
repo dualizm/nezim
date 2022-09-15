@@ -1,5 +1,6 @@
-local bind = vim.api.nvim_set_keymap
-local opts = { noremap = true, silent = true}
+local bind  = vim.api.nvim_set_keymap
+local vbind = vim.keymap.set
+local opts  = { noremap = true, silent = true}
 
 vim.g.mapleader = ' '
 
@@ -31,12 +32,29 @@ vim.g.mapleader = ' '
   bind('n', '<f6>', ':bn<cr>', opts)
 --]]
 
+--[[ ALIGN ]]--
+---[[
+  vbind('x', 'aa', function() require'align'.align_to_char(1, true)             end, opts) -- Aligns to 1 character, looking left
+  vbind('x', 'as', function() require'align'.align_to_char(2, true, true)       end, opts) -- Aligns to 2 characters, looking left and with previews
+  vbind('x', 'aw', function() require'align'.align_to_string(false, true, true) end, opts) -- Aligns to a string, looking left and with previews
+  vbind('x', 'ar', function() require'align'.align_to_string(true, true, true)  end, opts) -- Aligns to a Lua pattern, looking left and with previews
+
+  vbind('x', 'at', function() require'align'.align_to_string(false, false, false) end, opts) -- Aligns to a string, looking left and with previews
+--]]
+
+--[[ Telescope ]]--
+---[[
+  bind('n', '<leader>ff', '<cmd>Telescope find_files<cr>', opts)
+  bind('n', '<leader>fg', '<cmd>Telescope live_grep<cr>', opts)
+  bind('n', '<leader>fb', '<cmd>Telescope buffers<cr>', opts)
+  bind('n', '<leader>fh', '<cmd>Telescope help_tags<cr>', opts)
+--]]
+
 --[[ NvimTree ]]--
   bind('n', '<leader>n', ':NvimTreeToggle<cr>', opts)
 
 --[[ LSP ]]--
 ---[[
-  local vbind = vim.keymap.set
   vbind('n', '<space>e', vim.diagnostic.open_float, opts)
   vbind('n', '[d', vim.diagnostic.goto_prev, opts)
   vbind('n', ']d', vim.diagnostic.goto_next, opts)

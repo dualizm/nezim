@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/home/nim/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["align.nvim"] = {
+    loaded = true,
+    path = "/home/nim/.local/share/nvim/site/pack/packer/start/align.nvim",
+    url = "https://github.com/Vonr/align.nvim"
+  },
   ["beacon.nvim"] = {
     loaded = true,
     path = "/home/nim/.local/share/nvim/site/pack/packer/start/beacon.nvim",
@@ -93,6 +98,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/nim/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
+  },
+  conjure = {
+    loaded = true,
+    path = "/home/nim/.local/share/nvim/site/pack/packer/start/conjure",
+    url = "https://github.com/Olical/conjure"
   },
   ["gruvbox-material"] = {
     loaded = true,
@@ -208,6 +218,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/nim/.local/share/nvim/site/pack/packer/start/vim-colors-paramount",
     url = "https://github.com/owickstrom/vim-colors-paramount"
+  },
+  ["vim-jack-in"] = {
+    loaded = true,
+    path = "/home/nim/.local/share/nvim/site/pack/packer/start/vim-jack-in",
+    url = "https://github.com/clojure-vim/vim-jack-in"
   },
   ["vim-moonfly-colors"] = {
     loaded = true,

@@ -27,17 +27,29 @@ use {
   'terrortylor/nvim-comment',
 } 
 
+--[[ ALIGN ]]--
+  use 'Vonr/align.nvim'
 
 --[[ SEARCH ]]--
   -- Hlsearch Lens for Neovim 
   use 'kevinhwang91/nvim-hlslens'
 
---[[ Telescope ]]--
+--[[ TELESCOPE ]]--
 -- Find, Filter, Preview, Pick. All lua, all the time. 
 use {
   'nvim-telescope/telescope.nvim', tag = '0.1.0',
 -- or                            , branch = '0.1.x',
   requires = { {'nvim-lua/plenary.nvim'} }
+}
+
+--[[ LISP-LIKE ]]-- 
+use {
+  -- Interactive evaluation for Neovim 
+  -- (Clojure, Fennel, Janet, Racket, Hy, MIT Scheme, Guile) 
+  'Olical/conjure',
+
+  -- cider-jack-in for vim 
+  'clojure-vim/vim-jack-in',
 }
 
 --[[ SCROLL ]]--
