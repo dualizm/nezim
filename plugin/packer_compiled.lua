@@ -229,11 +229,14 @@ _G.packer_plugins = {
     path = "/home/nim/.local/share/nvim/site/pack/packer/start/textobj-diagnostic.nvim",
     url = "https://github.com/andrewferrier/textobj-diagnostic.nvim"
   },
+<<<<<<< HEAD
   ["trouble.nvim"] = {
     loaded = true,
     path = "/home/nim/.local/share/nvim/site/pack/packer/start/trouble.nvim",
     url = "https://github.com/folke/trouble.nvim"
   },
+=======
+>>>>>>> 1513730a5b143f91bcc86c7bfc3c8587150c5a51
   ["vim-colors-paramount"] = {
     loaded = true,
     path = "/home/nim/.local/share/nvim/site/pack/packer/start/vim-colors-paramount",
