@@ -75,10 +75,12 @@ use {
   -- A dark color scheme for Vim & Neovim 
   'bluz71/vim-moonfly-colors',
 
-  -- Palenight.nvim is a fast and modern colorscheme 
-  -- that supports the new Neovim features like 
-  -- builtin LSP and Treesitter and several plugins 
-  'wilmanbarrios/palenight.nvim',
+  -- Plugin that creates missing LSP diagnostics 
+  -- highlight groups for color schemes that don't yet support 
+  -- the Neovim 0.5 builtin LSP client. 
+  'folke/lsp-colors.nvim',
+
+  'B4mbus/oxocarbon-lua.nvim',
 }
 
 --[[ NVIM-TREE-SITTER ]]--

@@ -1,6 +1,6 @@
 require('settings')
 require('mappings')
-require('themes.moonfly')
+require('themes.oxocarbon')
 require('plugin-manager')
 
 -- Plugins config
