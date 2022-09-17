@@ -174,6 +174,11 @@ _G.packer_plugins = {
     path = "/home/nim/.local/share/nvim/site/pack/packer/start/nvim-scrollbar",
     url = "https://github.com/petertriho/nvim-scrollbar"
   },
+  ["nvim-transparent"] = {
+    loaded = true,
+    path = "/home/nim/.local/share/nvim/site/pack/packer/start/nvim-transparent",
+    url = "https://github.com/xiyaowong/nvim-transparent"
+  },
   ["nvim-tree.lua"] = {
     loaded = true,
     path = "/home/nim/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",

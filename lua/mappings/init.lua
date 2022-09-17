@@ -26,12 +26,6 @@ vim.g.mapleader = ' '
   bind('n', '<C-k>', '<C-w>k', opts)
 --]]
 
---[[ BUFFERS ]]--
----[[
-  bind('n', '<f5>', ':bf<cr>', opts)
-  bind('n', '<f6>', ':bn<cr>', opts)
---]]
-
 --[[ NEOGIT ]]--
 ---[[
   bind('n', '<f4>', ':Neogit<cr>', opts)
@@ -92,4 +86,48 @@ vim.g.mapleader = ' '
   vbind('n', 'gr', vim.lsp.buf.references, bufopts)
   vbind('n', '<space>f', vim.lsp.buf.formatting, bufopts)
   end
+--]]
+
+--[[ BARBAR ]]--
+---[[
+-- Move to previous/next
+bind('n', '<A-,>', '<cmd>BufferPrevious<cr>', opts)
+bind('n', '<A-.>', '<cmd>BufferNext<cr>', opts)
+-- Re-order to previous/next
+bind('n', '<A-<>', '<cmd>BufferMovePrevious<cr>', opts)
+bind('n', '<A->>', '<cmd>BufferMoveNext<cr>', opts)
+-- Goto buffer in position...
+bind('n', '<A-1>', '<cmd>BufferGoto 1<cr>', opts)
+bind('n', '<A-2>', '<cmd>BufferGoto 2<cr>', opts)
+bind('n', '<A-3>', '<cmd>BufferGoto 3<cr>', opts)
+bind('n', '<A-4>', '<cmd>BufferGoto 4<cr>', opts)
+bind('n', '<A-5>', '<cmd>BufferGoto 5<cr>', opts)
+bind('n', '<A-6>', '<cmd>BufferGoto 6<cr>', opts)
+bind('n', '<A-7>', '<cmd>BufferGoto 7<cr>', opts)
+bind('n', '<A-8>', '<cmd>BufferGoto 8<cr>', opts)
+bind('n', '<A-9>', '<cmd>BufferGoto 9<cr>', opts)
+bind('n', '<A-0>', '<cmd>BufferLast<cr>', opts)
+-- Pin/unpin buffer
+bind('n', '<A-p>', '<cmd>BufferPin<cr>', opts)
+-- Close buffer
+bind('n', '<A-c>', '<cmd>BufferClose<cr>', opts)
+-- Wipeout buffer
+--                 :BufferWipeout
+-- Close commands
+--                 :BufferCloseAllButCurrent
+--                 :BufferCloseAllButPinned
+--                 :BufferCloseAllButCurrentOrPinned
+--                 :BufferCloseBuffersLeft
+--                 :BufferCloseBuffersRight
+-- Magic buffer-picking mode
+bind('n', '<C-p>', '<cmd>BufferPick<cr>', opts)
+-- Sort automatically by...
+bind('n', '<Space>bb', '<cmd>BufferOrderByBufferNumber<cr>', opts)
+bind('n', '<Space>bd', '<cmd>BufferOrderByDirectory<cr>', opts)
+bind('n', '<Space>bl', '<cmd>BufferOrderByLanguage<cr>', opts)
+bind('n', '<Space>bw', '<cmd>BufferOrderByWindowNumber<cr>', opts)
+
+-- Other:
+-- :BarbarEnable - enables barbar (enabled by default)
+-- :BarbarDisable - very bad command, should never be used
 --]]

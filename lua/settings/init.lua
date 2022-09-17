@@ -53,12 +53,13 @@ local set = vim.opt
 --]]
 
 --[[ AUTOSTART ]]--
-  vim.api.nvim_create_autocmd('VimEnter', {
-    desc = 'Greets the user',
-    pattern = '*',
-    command =
-      "echo 'Hello,' . $USER . '!'",
-  })
+  -- OLD (notify won)
+  -- vim.api.nvim_create_autocmd('VimEnter', {
+  --   desc = 'Greets the user',
+  --   pattern = '*',
+  --   command =
+  --     "echo 'Hello,' . $USER . '!'",
+  -- })
 
 --[[ WILD ]]--
     set.wildmode = "longest:list,full"

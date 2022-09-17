@@ -14,7 +14,8 @@ return require('packer').startup(function(use)
   use { 'kyazdani42/nvim-tree.lua',
     requires = {
       'kyazdani42/nvim-web-devicons', -- optional, for file icons
-    }}
+    }
+  }
 
 --[[ GIT ]]--
   use 'TimUntersberger/neogit'
@@ -38,8 +39,8 @@ use {
   use 'kevinhwang91/nvim-hlslens'
 
 --[[ TELESCOPE ]]--
--- Find, Filter, Preview, Pick. All lua, all the time. 
 use {
+  -- Find, Filter, Preview, Pick. All lua, all the time. 
   'nvim-telescope/telescope.nvim', tag = '0.1.0',
 -- or                            , branch = '0.1.x',
   requires = { {'nvim-lua/plenary.nvim'} }
@@ -53,6 +54,9 @@ use {
 
   -- cider-jack-in for vim 
   'clojure-vim/vim-jack-in',
+
+  -- Adds neovim support to vim-dispatch 
+  'radenling/vim-dispatch-neovim'
 }
 
 --[[ SCROLL ]]--
@@ -131,7 +135,13 @@ use {
   -- A pretty diagnostics, references, telescope results,
   -- quickfix and location list to help you solve all 
   -- the trouble your code is causing. 
-  'folke/trouble.nvim'
+  'folke/trouble.nvim',
+
+  -- Official mirror of Paredit versions released on vim.org 
+  'kovisoft/paredit',
+
+  -- -- The neovim tabline plugin. 
+  'romgrk/barbar.nvim'
 }
 
 end)
