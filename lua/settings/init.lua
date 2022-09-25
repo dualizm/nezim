@@ -63,3 +63,29 @@ local set = vim.opt
 
 --[[ WILD ]]--
     set.wildmode = "longest:list,full"
+
+
+--[[ FILES ]]--
+---[[
+local ftset = vim.api.nvim_create_autocmd
+
+  ftset('filetype', {
+    pattern = 'make',
+    command = 'set noexpandtab nocin'
+  })
+
+  ftset('filetype', {
+    pattern = 'html',
+    command = 'set noexpandtab nocin textwidth=160'
+  })
+
+  ftset('filetype', {
+    pattern = 'css',
+    command = 'set noexpandtab nocin'
+  })
+
+  ftset('filetype', {
+    pattern = 'python',
+    command = 'set nocin'
+  })
+--]]

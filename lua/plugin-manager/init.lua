@@ -137,11 +137,11 @@ use {
   -- the trouble your code is causing. 
   'folke/trouble.nvim',
 
-  -- Official mirror of Paredit versions released on vim.org 
-  'kovisoft/paredit',
+  -- The neovim tabline plugin. 
+  'romgrk/barbar.nvim',
 
-  -- -- The neovim tabline plugin. 
-  'romgrk/barbar.nvim'
+  -- autopairs for neovim written by lua 
+  'windwp/nvim-autopairs',
 }
 
 end)

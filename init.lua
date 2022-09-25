@@ -21,6 +21,7 @@ require('plugin-config.diagnostic')
 require('plugin-config.trouble')
 require('plugin-config.neogit')
 require('plugin-config.barbar')
+require('plugin-config.autopair')
 
 -- set colorscheme
 require('themes.oxocarbon')

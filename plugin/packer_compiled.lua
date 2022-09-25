@@ -84,6 +84,11 @@ _G.packer_plugins = {
     path = "/home/nim/.local/share/nvim/site/pack/packer/start/align.nvim",
     url = "https://github.com/Vonr/align.nvim"
   },
+  ["barbar.nvim"] = {
+    loaded = true,
+    path = "/home/nim/.local/share/nvim/site/pack/packer/start/barbar.nvim",
+    url = "https://github.com/romgrk/barbar.nvim"
+  },
   ["beacon.nvim"] = {
     loaded = true,
     path = "/home/nim/.local/share/nvim/site/pack/packer/start/beacon.nvim",
@@ -149,6 +154,11 @@ _G.packer_plugins = {
     path = "/home/nim/.local/share/nvim/site/pack/packer/start/neoscroll.nvim",
     url = "https://github.com/karb94/neoscroll.nvim"
   },
+  ["nvim-autopairs"] = {
+    loaded = true,
+    path = "/home/nim/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
+    url = "https://github.com/windwp/nvim-autopairs"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/home/nim/.local/share/nvim/site/pack/packer/start/nvim-cmp",
@@ -173,11 +183,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/nim/.local/share/nvim/site/pack/packer/start/nvim-scrollbar",
     url = "https://github.com/petertriho/nvim-scrollbar"
-  },
-  ["nvim-transparent"] = {
-    loaded = true,
-    path = "/home/nim/.local/share/nvim/site/pack/packer/start/nvim-transparent",
-    url = "https://github.com/xiyaowong/nvim-transparent"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
@@ -243,6 +248,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/nim/.local/share/nvim/site/pack/packer/start/vim-colors-paramount",
     url = "https://github.com/owickstrom/vim-colors-paramount"
+  },
+  ["vim-dispatch-neovim"] = {
+    loaded = true,
+    path = "/home/nim/.local/share/nvim/site/pack/packer/start/vim-dispatch-neovim",
+    url = "https://github.com/radenling/vim-dispatch-neovim"
   },
   ["vim-illuminate"] = {
     loaded = true,
