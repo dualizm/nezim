@@ -142,6 +142,9 @@ use {
 
   -- autopairs for neovim written by lua 
   'windwp/nvim-autopairs',
+
+  -- Highlight colors for neovim 
+  'brenoprata10/nvim-highlight-colors'
 }
 
 end)

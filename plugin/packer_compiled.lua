@@ -169,6 +169,11 @@ _G.packer_plugins = {
     path = "/home/nim/.local/share/nvim/site/pack/packer/start/nvim-comment",
     url = "https://github.com/terrortylor/nvim-comment"
   },
+  ["nvim-highlight-colors"] = {
+    loaded = true,
+    path = "/home/nim/.local/share/nvim/site/pack/packer/start/nvim-highlight-colors",
+    url = "https://github.com/brenoprata10/nvim-highlight-colors"
+  },
   ["nvim-hlslens"] = {
     loaded = true,
     path = "/home/nim/.local/share/nvim/site/pack/packer/start/nvim-hlslens",

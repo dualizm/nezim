@@ -22,6 +22,7 @@ require('plugin-config.trouble')
 require('plugin-config.neogit')
 require('plugin-config.barbar')
 require('plugin-config.autopair')
+require('plugin-config.highlight-colors')
 
 -- set colorscheme
 require('themes.oxocarbon')

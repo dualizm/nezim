@@ -33,7 +33,7 @@ local set = vim.opt
 ---[[
   set.fileencoding = utf8
   set.termencoding = utf8
-  set.guifont      = "FiraCode Nerd Font Mono:h12"
+  set.guifont      = "CaskaydiaCove Nerd Font:h12"
 --]]
 
 --[[ COLORS ]]--
