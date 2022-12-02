@@ -1,12 +1,27 @@
-.PHONY: all clean
+#        . .  .             
+# .-..-.-|-..-| .-.-..-. .-.
+# ' '`-' '-'`-'-' ' '`-`-' '
+# makefile
+                          
+.PHONY: all init build clean
 
-comp        := fennel
-config-name := config
-config-lang := fnl
-build-dir   := lua
+fen         := fennel
+fnl-dir     := fnl/
+build-dir   := lua/
 
-all: $(config-name).$(config-lang)
-	$(comp) -c $< > lua/$(config-name).lua
+fnl-src := $(wildcard $(fnl-dir)*.fnl)
+lua-src := $(patsubst $(fnl-dir)%.fnl, $(build-dir)%.lua, $(fnl-src))
 
-clean: rm
-	rm -rf $(build-dir)/*
+all: init build
+
+build: $(fnl-src)
+	$(fen) -c $(fnl-src) > $(build-dir)main.lua
+
+$(lua-src)%.lua: $(fnl-src)%.fnl $(fen)
+	$(fen) -c $< > $@
+
+init: init.fnl
+	$(fen) -c $< > $@.lua
+
+clean: 
+	rm -rf $(build-dir)*
