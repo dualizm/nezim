@@ -26,7 +26,7 @@
   (tset :fileencoding   utf8)
   (tset :termencoding   utf8)
   (tset :guifont 
-    "CaskaydiaCove NF:h12")
+    "Blex Nerd Font:h12")
 ;; colors
   (tset :syntax           on)
   (tset :termguicolors  true)

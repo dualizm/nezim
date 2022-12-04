@@ -1,4 +1,4 @@
-for _, modules in ipairs({"main"}) do
+for _, modules in ipairs({"settings", "packages", "lualine-config"}) do
   require(modules)
 end
 return nil

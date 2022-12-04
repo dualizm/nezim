@@ -16,7 +16,7 @@ do
   _1_["hlsearch"] = true
   _1_["fileencoding"] = utf8
   _1_["termencoding"] = utf8
-  _1_["guifont"] = "CaskaydiaCove NF:h12"
+  _1_["guifont"] = "Blex Nerd Font:h12"
   _1_["syntax"] = on
   _1_["termguicolors"] = true
   _1_["wildmode"] = "longest:list,full"
