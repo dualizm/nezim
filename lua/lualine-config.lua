@@ -6,7 +6,7 @@ local function color_mode()
 end
 local conditions
 local function _1_()
-  return (vim.fn.empty(vim.fn.expand("%:t")) ~= 1)
+  return (vim.fn.empty(vim.fn.expand("%:t")) ~ 1)
 end
 local function _2_()
   return (vim.fn.winwidth(0) > 80)
