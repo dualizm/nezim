@@ -11,6 +11,14 @@
     ;;  neovim statusline plugin written in pure lua. 
     (use "nvim-lualine/lualine.nvim")
     
+    ;; file-manager
+    ;; A file explorer tree for neovim
+    ;; written in lua
+    (use { 
+      1 "kyazdani42/nvim-tree.lua"
+      :requires [
+          "kyazdani42/nvim-web-devicons"]})
+
     ;; themes
     (use [
       "shaunsingh/solarized.nvim"

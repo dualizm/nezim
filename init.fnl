@@ -10,7 +10,7 @@
 
   ;; plugins
     :sitter-cfg
-	 ;; TODO
-	 ;;:lualine
+	  :lualine-cfg
+    :nvim-tree-cfg
 	])]
   (require modules))

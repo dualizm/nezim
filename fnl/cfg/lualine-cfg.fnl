@@ -14,8 +14,8 @@
     :carrot   :#e08421
     :azure    :#007fff })
 
-  (fn color-mode []
-    (let [mode-color { 
+  (fn color_mode []
+    (let [mode_color { 
           :n colors.violet
           :i colors.red
           :v colors.blue
@@ -36,12 +36,12 @@
           "r?" colors.cyan
           "!" colors.red
           :t colors.red }]
-      { :fg (. mode-color vim.fn.mode)}))
+      { :fg (. mode_color vim.fn.mode)}))
 
   (local conditions {
-    :buffer-not-empty #(not= (vim.fn.empty (vim.fn.expand "%:t")) 1)
-    :hide-in-width #(> (vim.fn.winwidth 0) 80)
-    :check-git-workspace 
+    :buffer_not_empty #(not= (vim.fn.empty (vim.fn.expand "%:t")) 1)
+    :hide_in_width #(> (vim.fn.winwidth 0) 80)
+    :check_git_workspace 
       (λ []
         (local filepath (vim.fn.expand "%:p:h"))
         (local gitdir (vim.fn.finddir ".git" (.. filepath ";")))
@@ -51,116 +51,116 @@
   ;; config
   (local config {
     :options {
-      :component-separators ""
-      :section-separators ""
+      :component_separators ""
+      :section_separators ""
       :theme {
         :normal   { :c {  :fg colors.fg
-                          :bg "121212" }}
+                          :bg "002730" }}
         :inactive { :c {  :fg colors.fg
-                          :bg "121212" }}}}
+                          :bg "002730" }}}}
     :sections {
-        :lualine-a {}
-        :lualine-b {}
-        :lualine-y {}
-        :lualine-z {}
-        :lualine-c {}
-        :lualine-x {}}
-    :inactive-sections {
-        :lualine-a {}
-        :lualine-b {}
-        :lualine-y {}
-        :lualine-z {}
-        :lualine-c {}
-        :lualine-x {}}})
+        :lualine_a {}
+        :lualine_b {}
+        :lualine_y {}
+        :lualine_z {}
+        :lualine_c {}
+        :lualine_x {}}
+    :inactive_sections {
+        :lualine_a {}
+        :lualine_b {}
+        :lualine_y {}
+        :lualine_z {}
+        :lualine_c {}
+        :lualine_x {}}})
 
-  (fn ins-left [component]
-    (table.insert config.sections.lualine-c component))
+  (fn ins_left [component]
+    (table.insert config.sections.lualine_c component))
 
-  (fn ins-right [component]
-    (table.insert config.sections.lualine-x component))
+  (fn ins_right [component]
+    (table.insert config.sections.lualine_x component))
 
-  (ins-left {
+  (ins_left {
       1 #("▊")
-      :color color-mode
+      :color color_mode
       :padding { :left 0 :right 1 }})
 
-  (ins-left {
+  (ins_left {
     1 #("")
-    :color color-mode
+    :color color_mode
     :padding { :right 1 }})
   
-  (ins-left {
+  (ins_left {
     1 "filesize"
-    :cond conditions.buffer-not-empty})
+    :cond conditions.buffer_not_empty})
 
-  (ins-left {
+  (ins_left {
     1 "filename"
-    :cond conditions.buffer-not-empty
+    :cond conditions.buffer_not_empty
     :color { :fg colors.magenta :gui :bold }})
 
-  (ins-left [ :location ])
-  (ins-left { 1 :progress :color { :fg colors.fg :gui :bold } }) 
-  (ins-left {
+  (ins_left [ :location ])
+  (ins_left { 1 :progress :color { :fg colors.fg :gui :bold } }) 
+  (ins_left {
     1 :diagnostics
     :sources { :error " " :warn " " :info "" }
-    :diagnostics-color {
-      :color-error  { :fg colors.red }
-      :color-warn   { :fg colors.yellow }
-      :color-info   { :fg colors.cyan }}})
+    :diagnostics_color {
+      :color_error  { :fg colors.red }
+      :color_warn   { :fg colors.yellow }
+      :color_info   { :fg colors.cyan }}})
 
-  (ins-left [ #("%=") ])
+  (ins_left [ #("%=") ])
 
   ;; Lsp sersver name
-;;-- ins_left {
-;;--   -- Lsp server name .
-;;--   function()
-;;--     local msg = 'No Active Lsp'
-;;--     local buf_ft = vim.api.nvim_buf_get_option(0, 'filetype')
-;;--     local clients = vim.lsp.get_active_clients()
-;;--     if next(clients) == nil then
-;;--       return msg
-;;--     end
-;;--     for _, client in ipairs(clients) do
-;;--       local filetypes = client.config.filetypes
-;;--       if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
-;;--         return client.name
-;;--       end
-;;--     end
-;;--     return msg
-;;--   end,
-;;--   icon = ' LSP:',
-;;--   color = { fg = '#ffffff', gui = 'bold' },
-;;-- }
+;;__ ins_left {
+;;__   __ Lsp server name .
+;;__   function()
+;;__     local msg = 'No Active Lsp'
+;;__     local buf_ft = vim.api.nvim_buf_get_option(0, 'filetype')
+;;__     local clients = vim.lsp.get_active_clients()
+;;__     if next(clients) == nil then
+;;__       return msg
+;;__     end
+;;__     for _, client in ipairs(clients) do
+;;__       local filetypes = client.config.filetypes
+;;__       if filetypes and vim.fn.index(filetypes, buf_ft) ~= _1 then
+;;__         return client.name
+;;__       end
+;;__     end
+;;__     return msg
+;;__   end,
+;;__   icon = ' LSP:',
+;;__   color = { fg = '#ffffff', gui = 'bold' },
+;;__ }
 
-  (ins-right { 
+  (ins_right { 
     1 "o:encoding"
     :fmt string.upper
-    :cond conditions.hide-in-width
+    :cond conditions.hide_in_width
     :color { :fg colors.green :gui :bold }})
 
-  (ins-right {
+  (ins_right {
     1 :fileformat
     :fmt string.upper
-    :icons-enabled false
+    :icons_enabled false
     :color { :fg colors.green :gui :bold }})
 
-  (ins-right {
+  (ins_right {
     1 "branch"
     :icon ""
     :color { :fg colors.violet :gui :bold }})
 
-  (ins-right {
+  (ins_right {
     1 "diff"
     :symbols { :added " " :modified "柳 " :removed " " }
-    :diff-color {
+    :diff_color {
       :added { :fg colors.green }
       :modified { :fg colors.orange }
       :removed { :fg colors.red }}
-    :cond conditions.hide-in-width})
+    :cond conditions.hide_in_width})
 
-  (ins-right {
+  (ins_right {
     1 #("▊")
-    :color color-mode
+    :color color_mode
     :padding { :left 1 }})
 
   (lualine.setup config))
