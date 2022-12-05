@@ -11,6 +11,17 @@
     ;;  neovim statusline plugin written in pure lua. 
     (use "nvim-lualine/lualine.nvim")
     
+    ;; themes
+    (use [
+      "shaunsingh/solarized.nvim"
+      ])
 
+    ;; sitter
+    (use { 
+      1 "nvim-treesitter/nvim-treesitter" 
+      :run ":TSUpdate"
+      :requires [
+        "nvim-treesitter/nvim-treesitter-context"
+        "andrewferrier/textobj-diagnostic.nvim"]})
 
     true))

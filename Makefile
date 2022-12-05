@@ -3,7 +3,7 @@
 # ' '`-' '-'`-'-' ' '`-`-' '
 # makefile
                           
-.PHONY: all init build clean help install-packer packages settings lualine-confing
+.PHONY: all init build clean help install-packer packages settings colorscheme lualine sitter 
 
 fen         := fennel
 packs-dir   := packages-config
@@ -13,20 +13,26 @@ build-dir   := lua
 fnl-src := $(wildcard $(fnl-dir)/*.fnl)
 lua-src := $(patsubst $(fnl-dir)/%.fnl, $(build-dir)/%.lua, $(fnl-src))
 
-all: init settings packages lualine-config
+all: init settings packages colorscheme lualine sitter
 
 help:
 	@printf "run \"make\" to compile all fnl files in lua.\n"\
 	"run \"make install-packer\" to install the package manager.\n"\
 	"run \"make clean\" to clear all compiled lua files.\n"
 
-lualine-config: $(fnl-dir)/$(packs-dir)/lualine-config.fnl
+lualine: $(fnl-dir)/$(packs-dir)/lualine.fnl
+	$(fen) -c $< > $(build-dir)/$@.lua
+
+sitter: $(fnl-dir)/$(packs-dir)/sitter.fnl
 	$(fen) -c $< > $(build-dir)/$@.lua
 
 packages: $(fnl-dir)/packages.fnl
 	$(fen) -c $< > $(build-dir)/$@.lua
 
 settings: $(fnl-dir)/settings.fnl
+	$(fen) -c $< > $(build-dir)/$@.lua
+
+colorscheme: $(fnl-dir)/colorscheme.fnl
 	$(fen) -c $< > $(build-dir)/$@.lua
 
 init: init.fnl

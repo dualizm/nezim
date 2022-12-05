@@ -6,8 +6,12 @@
 (each [_ modules (ipairs 
 	[:settings
 	 :packages
+	 :colorscheme
+
+   ;; plugins
+   :sitter
 
 	 ;; TODO
-	 ;;:lualine-config
+	 ;;:lualine
 	])]
   (require modules))
