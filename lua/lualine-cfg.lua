@@ -1,12 +1,12 @@
 local lualine = require("lualine")
 local colors = {bg = "#202328", fg = "#bbc2cf", yellow = "#ECBE7B", cyan = "#008080", darkblue = "#081633", green = "#98be65", orange = "#FF8800", violet = "#a9a1e1", magenta = "#c678dd", blue = "#51afef", red = "#ec5f67", carrot = "#e08421", azure = "#007fff"}
 local function color_mode()
-  local mode_color = {n = colors.violet, i = colors.red, v = colors.blue, ["\22"] = colors.azure, V = colors.azure, c = colors.magenta, no = colors.red, s = colors.orange, S = colors.orange, ["\19"] = colors.orange, ic = colors.yellow, R = colors.carrot, Rv = colors.carrot, cv = colors.red, ce = colors.red, r = colors.cyan, rm = colors.cyan, ["r?"] = colors.cyan, ["!"] = colors.red, t = colors.red}
+  local mode_color = {n = colors.violet, i = colors.red, v = colors.blue, [""] = colors.azure, V = colors.azure, c = colors.magenta, no = colors.red, s = colors.orange, S = colors.orange, [""] = colors.orange, ic = colors.yellow, R = colors.carrot, Rv = colors.carrot, cv = colors.red, ce = colors.red, r = colors.cyan, rm = colors.cyan, ["r?"] = colors.cyan, ["!"] = colors.red, t = colors.red}
   return {fg = mode_color[vim.fn.mode]}
 end
 local conditions
 local function _1_()
-  return (vim.fn.empty(vim.fn.expand("%:t")) ~ 1)
+  return (vim.fn.empty(vim.fn.expand("%:t")) ~= 1)
 end
 local function _2_()
   return (vim.fn.winwidth(0) > 80)

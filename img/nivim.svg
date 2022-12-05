@@ -7,8 +7,8 @@
    viewBox="0 0 100.1 100"
    version="1.1"
    id="svg8124"
-   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
-   sodipodi:docname="nivim-v1.0r.svg"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   sodipodi:docname="nivim.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -27,15 +27,17 @@
      inkscape:guide-bbox="true"
      inkscape:snap-nodes="true"
      inkscape:snap-bbox="false"
-     inkscape:zoom="2"
-     inkscape:cx="160"
-     inkscape:cy="195.5"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="4.5961941"
+     inkscape:cy="177.83736"
      inkscape:window-width="1904"
-     inkscape:window-height="1022"
+     inkscape:window-height="917"
      inkscape:window-x="6"
      inkscape:window-y="48"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1">
+     inkscape:current-layer="layer1"
+     inkscape:showpageshadow="2"
+     inkscape:deskcolor="#c5a8cb">
     <sodipodi:guide
        position="2.3841859e-07,90.557811"
        orientation="-1,0"
@@ -72,7 +74,7 @@
      inkscape:groupmode="layer"
      id="layer1">
     <ellipse
-       style="fill:#ffdf00;fill-opacity:1;stroke:#1564a1;stroke-width:2;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       style="fill:#ffffff;fill-opacity:1;stroke:#1564a1;stroke-width:2;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
        id="path8317"
        cx="50.049999"
        cy="50"
@@ -148,7 +150,7 @@
        ry="1.6059526" />
     <path
        sodipodi:type="star"
-       style="fill:#52a434;fill-opacity:1;stroke:#1564a1;stroke-width:3.96163;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:31.693, 31.693;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       style="fill:#52a434;fill-opacity:1;stroke:#52a434;stroke-width:3.96163;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:31.693, 31.693;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
        id="path12792"
        inkscape:flatsided="false"
        sodipodi:sides="4"

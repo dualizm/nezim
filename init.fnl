@@ -4,13 +4,12 @@
 ;;; init
 
 (each [_ modules (ipairs 
-	[:settings
-	 :packages
-	 :colorscheme
+	[ :settings
+	  :packages
+	  :colorscheme
 
-   ;; plugins
-   :sitter
-
+  ;; plugins
+    :sitter-cfg
 	 ;; TODO
 	 ;;:lualine
 	])]

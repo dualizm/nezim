@@ -1,4 +1,4 @@
-for _, modules in ipairs({"settings", "packages", "colorscheme", "sitter"}) do
+for _, modules in ipairs({"settings", "packages", "colorscheme", "sitter-cfg"}) do
   require(modules)
 end
 return nil

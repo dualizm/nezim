@@ -39,8 +39,7 @@
       { :fg (. mode-color vim.fn.mode)}))
 
   (local conditions {
-    ;; TODO ~= 1
-    :buffer-not-empty #(bxor (vim.fn.empty (vim.fn.expand "%:t")) 1)
+    :buffer-not-empty #(not= (vim.fn.empty (vim.fn.expand "%:t")) 1)
     :hide-in-width #(> (vim.fn.winwidth 0) 80)
     :check-git-workspace 
       (λ []
