@@ -3,11 +3,12 @@ local vbind = vim.heymap.set
 local opts = {noremap = true, silent = true}
 vim.g.mapleader = " "
 vim.g.localleader = ","
-local function make_binds(table_binds)
-  for mode, lhs, rhs in unpack(table_binds) do
-    bind(mode, lhs, rhs, opts)
+local function make_binds(opts0, table_binds)
+  for _, t in ipairs(table_binds) do
+    bind(table.unpack(t), opts0)
   end
   return nil
 end
-make_binds({[{"n", "<f2>", "<esc>:w<cr>"}] = {"i", "<f2>", "<esc>:w<cr>"}})
+bind("n", "<f2>", "<esc>:w<cr>", opts)
+bind("i", "<f2>", "<esc>:w<cr>", opts)
 return true

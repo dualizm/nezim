@@ -21,7 +21,7 @@
 
     ;; themes
     (use [
-      "shaunsingh/solarized.nvim"
+      "ishan9299/nvim-solarized-lua"
       ])
 
     ;; sitter

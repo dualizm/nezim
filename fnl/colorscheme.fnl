@@ -1,11 +1,11 @@
-;;(doto vim.g
-;;  (tset :solarized-italic-comments    true)
-;;  (tset :solarized-italic-keywords    false)
-;;  (tset :solarized-italic-functions   false)
-;;  (tset :solarized-italic-variables   false)
-;;  (tset :solarized-contrast           true)
-;;  (tset :solarized-borders            true)
-;;  (tset :solarized-disable-background false))
-;;
-;;((. (require :solarized) :set))
-(vim.cmd "colorscheme solarized")
+(doto vim.g
+  (tset :solarized_italics    true)
+  (tset :solarized_visibility :normal)
+  (tset :solarized_diffmode   :normal)
+  (tset :solarized_statusline :normal))
+
+;;(if (= vim.fn.has :gui_running 0)
+;;    (set vim.g.solarized_termtrans 0)
+;;    (set vim.g.solarized_termtrans 1))
+
+(vim.cmd "colorscheme solarized-high")

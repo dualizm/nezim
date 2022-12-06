@@ -5,17 +5,19 @@
 (set vim.g.mapleader " ")
 (set vim.g.localleader ",")
 
+(fn make-binds [opts table-binds]
+  (each [_ t (ipairs table-binds)]
+    (bind (table.unpack t) opts)))
+
+
 ;; save-binds
-(fn make-binds [table-binds]
-  (each [mode lhs rhs (unpack table-binds)]
-    (bind mode lhs rhs opts)))
+(bind :n :<f2> "<esc>:w<cr>" opts)
+(bind :i :<f2> "<esc>:w<cr>" opts)
   
-(make-binds 
-  { [:n :<f2> "<esc>:w<cr>"]
-    [:i :<f2> "<esc>:w<cr>"]})
+;;(make-binds opts
+;;  { [:n :<f2> "<esc>:w<cr>"]
+;;    [:i :<f2> "<esc>:w<cr>"]})
 true
-;;(bind :n :<f2> "<esc>:w<cr>" opts)
-;;(bind :i :<f2> "<esc>:w<cr>" opts)
 ;;(bind :n :<f10> "<esc>:x<cr>" opts)
 ;;(bind :i :<f10> "<esc>:x<cr>" opts)
 ;;
