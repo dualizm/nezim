@@ -1,37 +1,20 @@
 do
-  local _1_ = vim.opt
-  _1_["smarttab"] = true
-  _1_["expandtab"] = true
-  _1_["tabstop"] = 2
-  _1_["softtabstop"] = 2
-  _1_["shiftwidth"] = 2
-  _1_["autoindent"] = true
-  _1_["smartindent"] = true
-  _1_["relativenumber"] = true
-  _1_["number"] = true
-  _1_["showcmd"] = true
-  _1_["textwidth"] = 80
-  _1_["incsearch"] = true
-  _1_["smartcase"] = true
-  _1_["hlsearch"] = true
-  _1_["fileencoding"] = utf8
-  _1_["termencoding"] = utf8
-  _1_["guifont"] = "Blex Nerd Font:h12"
-  _1_["syntax"] = on
-  _1_["termguicolors"] = true
-  _1_["wildmode"] = "longest:list,full"
+  local options = {smarttab = true, expandtab = true, tabstop = 2, softtabstop = 2, shiftwidth = 2, autoindent = true, smartindent = true, relativenumber = true, number = true, showcmd = true, textwidth = 80, incsearch = true, smartcase = true, hlsearch = true, fileencoding = utf8, termencoding = utf8, guifont = "Blex Nerd Font:h12", syntax = on, termguicolors = true, wildmode = "longest:list,full"}
+  for option, value in pairs(options) do
+    vim.opt[option] = value
+  end
 end
 do
   local acmd = vim.api.nvim_create_autocmd
-  local function _2_()
+  local function _1_()
     return vim.highlight.on_yank({higroup = "IncSearch", timeout = 500})
   end
-  acmd("TextYankPost", {desc = "Hightlight selection on yank", pattern = "*", callback = _2_})
+  acmd("TextYankPost", {desc = "Hightlight selection on yank", pattern = "*", callback = _1_})
   acmd("VimEnter", {desc = "Greets the user", pattern = "*", command = "echo 'Hello, ' . $USER . '!'"})
-  local _3_ = "filetype"
-  acmd(_3_, {pattern = "make", command = "set noexpandtab nocin"})
-  acmd(_3_, {pattern = "html", command = "set noexpandtab nocin textwidth=160"})
-  acmd(_3_, {pattern = "css", command = "set noexpandtab nocin"})
-  acmd(_3_, {pattern = "python", command = "set nocin"})
+  local _2_ = "filetype"
+  acmd(_2_, {pattern = "make", command = "set noexpandtab nocin"})
+  acmd(_2_, {pattern = "html", command = "set noexpandtab nocin textwidth=160"})
+  acmd(_2_, {pattern = "css", command = "set noexpandtab nocin"})
+  acmd(_2_, {pattern = "python", command = "set nocin"})
 end
 return true

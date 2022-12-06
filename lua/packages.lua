@@ -1,10 +1,15 @@
 local function _1_(use)
-  _G.assert((nil ~= use), "Missing argument use on fnl/packages.fnl:2")
+  _G.assert((nil ~= use), "Missing argument use on fnl/config/packages.fnl:2")
   use("wbthomason/packer.nvim")
   use("nvim-lualine/lualine.nvim")
   use({requires = {"kyazdani42/nvim-web-devicons"}, "kyazdani42/nvim-tree.lua"})
-  use({"ishan9299/nvim-solarized-lua"})
+  use("terrortylor/nvim-comment")
+  use("ishan9299/nvim-solarized-lua")
   use({run = ":TSUpdate", requires = {"nvim-treesitter/nvim-treesitter-context", "andrewferrier/textobj-diagnostic.nvim"}, "nvim-treesitter/nvim-treesitter"})
+  use("karb94/neoscroll.nvim")
+  use({"rainbowhxch/beacon.nvim", "p00f/nvim-ts-rainbow", "RRethy/vim-illuminate"})
+  use({"neovim/nvim-lspconfig", "williamboman/mason.nvim", "williamboman/mason-lspconfig.nvim", "hrsh7th/nvim-cmp", "hrsh7th/cmp-nvim-lsp", "saadparwaiz1/cmp_luasnip", "L3MON4D3/LuaSnip", "onsails/lspkind.nvim"})
+  use("Olical/conjure")
   return true
 end
 return (require("packer")).startup(_1_)

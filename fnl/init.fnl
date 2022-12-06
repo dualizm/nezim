@@ -7,10 +7,18 @@
 	[ :settings
 	  :packages
 	  :colorscheme
+    :mappings
 
   ;; plugins
-    :sitter-cfg
-	  :lualine-cfg
-    :nvim-tree-cfg
+    :+sitter
+	  :+lualine
+    :+nvim-tree
+    :+nvim-comment
+    :+neoscroll
+    :+beacon
+    :+illuminate
+    :+lsp
+    :+mason
+    :+nvim-cmp
 	])]
   (require modules))

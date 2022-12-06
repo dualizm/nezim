@@ -13,8 +13,9 @@
       :enable true
       :extended-mode true
       :max-file-lines nil
-      :colors [ "#2e4740" ]
-      :termcolors {}}
+      ;;:colors [ "#2e4740" ]
+      ;;:termcolors {}
+      }
     :context-commentstring {
       :enable true
       :enable-autocmd false}})

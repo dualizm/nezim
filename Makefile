@@ -4,15 +4,15 @@
 # makefile
                           
 .PHONY: all init build clean\
-	help install-packer
+				help install-packer
 
 fen    	  := fennel
-cfg-dir   := cfg
-fnl-dir   := fnl
+plug-dir  := plugins
+fnl-dir   := fnl/config
 build-dir := lua
 
-fnl-cfg-src := $(wildcard $(fnl-dir)/$(cfg-dir)/*.fnl)
-fnl-src     := $(wildcard $(fnl-dir)/*.fnl) $(fnl-cfg-src)
+fnl-plug-src 	:= $(wildcard $(fnl-dir)/$(plug-dir)/*.fnl)
+fnl-src     	:= $(wildcard $(fnl-dir)/*.fnl) $(fnl-plug-src)
 
 all: init build
 
@@ -25,7 +25,7 @@ build: $(fnl-src)
 	$(foreach file, $(fnl-src),\
 		$(fen) -c $(file) > $(build-dir)/$(notdir $(patsubst %.fnl, %.lua, $(file)));)
 
-init: init.fnl
+init: fnl/init.fnl
 	$(fen) --compile $< > $@.lua
 
 install-packer: 
