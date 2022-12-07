@@ -1,6 +1,6 @@
 (var capabilities (vim.lsp.protocol.make_client_capabilities))
 
-(set capabilities ((. (require :cmp_nvim_lsp) :update_capabilities) capabilities))
+(set capabilities ((. (require :cmp_nvim_lsp) :default_capabilities) capabilities))
 
 (let [luasnip (require :luasnip)
       lspkind (require :lspkind)
