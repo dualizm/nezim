@@ -1,5 +1,6 @@
 # nimf ( $\textcolor{red}{\text{n}}$ otidman assembly neov $\textcolor{red}{\text{im}}$ on $\textcolor{red}{\text{f}}$ ennel )
 ---
+```
 
  ███▄    █  ██▓ ███▄ ▄███▓  █████▒
  ██ ▀█   █ ▓██▒▓██▒▀█▀ ██▒▓██   ▒ 
@@ -10,4 +11,5 @@
 ░ ░░   ░ ▒░ ▒ ░░  ░      ░ ░      
    ░   ░ ░  ▒ ░░      ░    ░ ░    
          ░  ░         ░           
+```
 ---                                  
