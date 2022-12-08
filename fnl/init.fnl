@@ -34,5 +34,6 @@
     :+nvim-cmp
     :+telescope
     :+wilder
+    :+todo-comments
 	])]
   (require modules))

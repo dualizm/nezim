@@ -1,7 +1,7 @@
 (local lsp-config (require :lspconfig))
 (let [lsp-f (require :lsp-format)]
   ((. lsp-f :setup))
-  ((. (. lsp-config :gopls) :setup) { :on_attach (. lsp-f :on_attach)})
+  ((. (. lsp-config :gopls) :setup) { :on_attach (. lsp-f :on_attach)}))
 
 (local servers 
   [ :clangd 

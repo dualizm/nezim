@@ -30,10 +30,15 @@
     :nvim-treesitter/nvim-treesitter {
       :run ":TSUpdate"
         :requires 
-          ;; show code context
+            ;; show code context
           [ :nvim-treesitter/nvim-treesitter-context
+
             ;; text object that finds diagnostics
-            :andrewferrier/textobj-diagnostic.nvim]}
+            :andrewferrier/textobj-diagnostic.nvim
+
+            ;; Highlight, list and search todo
+            ;; comments in your projects 
+            :folke/todo-comments.nvim]}
 
     ;; scroll
     ;; smooth scrolling
