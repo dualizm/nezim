@@ -1,4 +1,4 @@
-for _, modules in ipairs({"settings", "packages", "colorscheme", "mappings", "+sitter", "+lualine", "+nvim-tree", "+nvim-comment", "+neoscroll", "+beacon", "+illuminate", "+lsp", "+mason", "+nvim-cmp"}) do
+for _, modules in ipairs({"settings", "packages", "colorscheme", "mappings", "+sitter", "+lualine", "+nvim-tree", "+nvim-comment", "+neoscroll", "+beacon", "+illuminate", "+lsp", "+mason", "+nvim-cmp", "+telescope", "+wilder"}) do
   require(modules)
 end
 return nil

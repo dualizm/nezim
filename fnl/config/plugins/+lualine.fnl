@@ -102,7 +102,8 @@
   (ins_left { 1 :progress :color { :fg colors.fg :gui :bold } }) 
   (ins_left {
     1 :diagnostics
-    :sources { :error " " :warn " " :info "" }
+    :sources [ "nvim_diagnostic"]
+    :symbols { :error " " :warn " " :info "" }
     :diagnostics_color {
       :color_error  { :fg colors.red }
       :color_warn   { :fg colors.yellow }

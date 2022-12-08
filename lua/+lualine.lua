@@ -36,7 +36,7 @@ ins_left({cond = conditions.buffer_not_empty, "filesize"})
 ins_left({cond = conditions.buffer_not_empty, color = {fg = colors.magenta, gui = "bold"}, "filename"})
 ins_left({"location"})
 ins_left({color = {fg = colors.fg, gui = "bold"}, "progress"})
-ins_left({sources = {error = "\239\129\151 ", warn = "\239\129\177 ", info = "\239\129\170"}, diagnostics_color = {color_error = {fg = colors.red}, color_warn = {fg = colors.yellow}, color_info = {fg = colors.cyan}}, "diagnostics"})
+ins_left({sources = {"nvim_diagnostic"}, symbols = {error = "\239\129\151 ", warn = "\239\129\177 ", info = "\239\129\170"}, diagnostics_color = {color_error = {fg = colors.red}, color_warn = {fg = colors.yellow}, color_info = {fg = colors.cyan}}, "diagnostics"})
 local function _6_()
   return ("%=")()
 end

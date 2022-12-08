@@ -29,10 +29,10 @@
             "Blex Nerd Font:h12"
       ;; colors
           :syntax          on
-          :termguicolors true
+          :termguicolors true}]
       ;; wild
-          :wildmode
-            "longest:list,full"}]
+          ;;:wildmode
+            ;;"longest:list,full"}]
   (each [option value (pairs options)]
     (tset vim.opt option value)))
 

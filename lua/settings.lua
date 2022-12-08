@@ -1,5 +1,5 @@
 do
-  local options = {smarttab = true, expandtab = true, tabstop = 2, softtabstop = 2, shiftwidth = 2, autoindent = true, smartindent = true, relativenumber = true, number = true, showcmd = true, textwidth = 80, incsearch = true, smartcase = true, hlsearch = true, fileencoding = utf8, termencoding = utf8, guifont = "Blex Nerd Font:h12", syntax = on, termguicolors = true, wildmode = "longest:list,full"}
+  local options = {smarttab = true, expandtab = true, tabstop = 2, softtabstop = 2, shiftwidth = 2, autoindent = true, smartindent = true, relativenumber = true, number = true, showcmd = true, textwidth = 80, incsearch = true, smartcase = true, hlsearch = true, fileencoding = utf8, termencoding = utf8, guifont = "Blex Nerd Font:h12", syntax = on, termguicolors = true}
   for option, value in pairs(options) do
     vim.opt[option] = value
   end
