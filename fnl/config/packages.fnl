@@ -13,9 +13,9 @@
     ;; A file explorer tree for neovim
     ;; written in lua
     :kyazdani42/nvim-tree.lua {
-      :requires 
-        ;; file icons
-        [:kyazdani42/nvim-web-devicons]}
+    :requires 
+    ;; file icons
+    [:kyazdani42/nvim-web-devicons]}
 
     ;; commenter
     ;; A comment toggler
@@ -93,6 +93,9 @@
 
     ;; A more adventurous wildmenu 
     :gelguy/wilder.nvim {}
+
+    ;; Neovim motions on speed! 
+    :phaazon/hop.nvim {}
 
     ;; lisp
     ;; Interactive evaluation for neovim

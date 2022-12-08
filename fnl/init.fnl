@@ -35,5 +35,6 @@
     :+telescope
     :+wilder
     :+todo-comments
+    :+hop
 	])]
   (require modules))

@@ -1,8 +1,16 @@
 (let [bind vim.api.nvim_set_keymap
       vbind vim.keymap.set
-      opts {:noremap true :silent true}]
+      opts {:noremap true :silent true}
+      hop (require :hop)
+      directions (. (require :hop.hint) :HintDirection)]
   (set vim.g.mapleader    " ")
   (set vim.g.localleader  ",")
+
+  ;; hop
+  (vbind "" :f #(hop.hint_char1 { :direction directions.AFTER_CURSOR  :current_line_only true}) { :remap true})
+  (vbind "" :F #(hop.hint_char1 { :direction directions.BEFORE_CURSOR :current_line_only true}) { :remap true})
+  (vbind "" :t #(hop.hint_char1 { :direction directions.AFTER_CURSOR  :current_line_only true}) { :remap true})
+  (vbind "" :T #(hop.hint_char1 { :direction directions.BEFORE_CURSOR :current_line_only true}) { :remap true})
 
   ;;; declaration of binds of the form 
   ;;; [ mode key-combination command ]
