@@ -1,5 +1,5 @@
 # nimf
-<p align="center"><img src="img/res/nimf.svg" alt="nimf"/></p>
+<p align="center"><img src="res/img/nimf.svg" alt="nimf"/></p>
 ## Introduction
 This project was created to provide a simple and powerful environment for working with code. Described entirely in fennel, the build provides convenient bindings for commands, but also an open API for user customization.
 ## Installation
