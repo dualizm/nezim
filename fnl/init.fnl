@@ -1,7 +1,3 @@
-;;;; @authors notidman <ognieff@yandex.ru>
-;;;; @url https://github.com/notidman/nimf
-;;;; @project-name nimf
-;;;; @date-start 09-15-22
 ;;;;
 ;;;;  ▓███▄    █  ██  ███▄ ▄███▓  █████▒
 ;;;;  ▓██ ▀█   █  ██ ▓██▒▀█▀ ██▒▓██   ▒ 
@@ -12,6 +8,11 @@
 ;;;;  ░ ░░   ░ ▒░ ▒ ░░  ░      ░ ░      
 ;;;;     ░   ░ ░  ▒ ░░      ░    ░ ░    
 ;;;;           ░  ░         ░        
+;;;; init
+;;;; @authors notidman <ognieff@yandex.ru>
+;;;; @url https://github.com/notidman/nimf
+;;;; @project-name nimf
+;;;; @date-start 09-15-22
 
 (each [_ modules (ipairs 
 	[ 

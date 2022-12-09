@@ -1,9 +1,7 @@
 local lsp_config = require("lspconfig")
-do
-  local lsp_f = require("lsp-format")
-  lsp_f.setup()
-  lsp_config.gopls.setup({on_attach = lsp_f.on_attach})
-end
+local lsp_f = require("lsp-format")
+lsp_f.setup()
+lsp_config.gopls.setup({on_attach = lsp_f.on_attach})
 local on_attach
 local function _1_(client, bufnr)
   _G.assert((nil ~= bufnr), "Missing argument bufnr on fnl/config/plugins/+lsp.fnl:7")
