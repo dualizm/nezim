@@ -30,8 +30,9 @@
     :+beacon
     :+illuminate
     :+lsp
-    :+mason
+    :+lspkind
     :+nvim-cmp
+    :+mason
     :+telescope
     :+wilder
     :+todo-comments

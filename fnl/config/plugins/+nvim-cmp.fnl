@@ -1,7 +1,3 @@
-(var capabilities (vim.lsp.protocol.make_client_capabilities))
-
-(set capabilities ((. (require :cmp_nvim_lsp) :default_capabilities) capabilities))
-
 (let [luasnip (require :luasnip)
       lspkind (require :lspkind)
       cmp     (require :cmp)]
@@ -14,27 +10,28 @@
             :<C-Space> (cmp.mapping.complete)
             :<CR> (cmp.mapping.confirm 
                     { :behavior cmp.ConfirmBehavior.Replace
-                      :select true})})
-      :<Tab> (cmp.mapping 
-                (λ [fallback] 
-                   (if (cmp.visible)
-                       (cmp.select_next_item)
-                       (luasnip.expand_or_jumpable)
-                       (luasnip.expand_or_jump)
-                       (fallback))) 
-                [ :i :s ])
-      :<S-Tab> (cmp.mapping 
-                (λ [fallback] 
-                   (if (cmp.visible)
-                       (cmp.select_prev_item)
-                       (luasnip.expand_or_jumpable -1)
-                       (luasnip.expand_or_jump -1)
-                       (fallback))) 
-                [ :i :s ])
+                      :select true})
+            :<Tab> (cmp.mapping 
+                      (λ [fallback] 
+                         (if (cmp.visible)
+                             (cmp.select_next_item)
+                             (luasnip.expand_or_jumpable)
+                             (luasnip.expand_or_jump)
+                             (fallback))) 
+                      [ :i :s ])
+            :<S-Tab> (cmp.mapping 
+                      (λ [fallback] 
+                         (if (cmp.visible)
+                             (cmp.select_prev_item)
+                             (luasnip.expand_or_jumpable -1)
+                             (luasnip.expand_or_jump -1)
+                             (fallback))) 
+                      [ :i :s ])})
       :sources [ { :name :nvim_lsp } { :name :luasnip } ]
       :formatting {
         :format (lspkind.cmp_format 
-                  { :with_text true
+                  { :mode :symbol
                     :maxwidth 50
+                    :ellipsis_car "..."
                     :before (λ [entry vim-item] vim-item)})}}))
   
