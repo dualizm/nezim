@@ -10,7 +10,7 @@ build-dir := lua
 fnl-plug-src 	:= $(wildcard $(fnl-dir)/$(plug-dir)/*.fnl)
 fnl-src     	:= $(wildcard $(fnl-dir)/*.fnl) $(fnl-plug-src)
 
-all: init build
+all: init dirmk build
 
 init: fnl/init.fnl
 	$(fen) --compile $< > $@.lua
@@ -18,6 +18,9 @@ init: fnl/init.fnl
 build: $(fnl-src)
 	$(foreach file, $(fnl-src),\
 		$(fen) -c $(file) > $(build-dir)/$(notdir $(patsubst %.fnl, %.lua, $(file)));)
+
+dirmk:
+	mkdir lua
 
 help:
 	@printf "run \"make\" to compile all fnl files in lua.\n"\
