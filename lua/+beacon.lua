@@ -1,1 +1,0 @@
-return (require("beacon")).setup({enable = true, size = 40, fade = true, minimal_jump = 10, show_jumps = true, shrink = true, timeout = 500, ignore_buffers = {}, ignore_filetypes = {}, focus_gained = false})
