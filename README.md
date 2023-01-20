@@ -1,4 +1,4 @@
-# nimf
+# nezim
 <p align="center"><img src="res/img/nimf.svg" alt="nimf"/></p>
 
 ## Introduction
