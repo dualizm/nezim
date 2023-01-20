@@ -1,8 +1,3 @@
-#        . .  .             
-# .-..-.-|-..-| .-.-..-. .-.
-# ' '`-' '-'`-'-' ' '`-`-' '
-# makefile
-                          
 .PHONY: all init build clean help\
 				install install-packer\
 				sync-plugins\

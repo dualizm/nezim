@@ -1,17 +1,7 @@
-;;;;
-;;;;  ▓███▄    █  ██  ███▄ ▄███▓  █████▒
-;;;;  ▓██ ▀█   █  ██ ▓██▒▀█▀ ██▒▓██   ▒ 
-;;;;  ▓██  ▀█ ██ ▒██▒▓██    ▓██░▒████ ░ 
-;;;;  ▓██▒  ▐▌██▒░██░▒██    ▒██ ░▓█▒  ░ 
-;;;;  ▒██░   ▓██░░██░▒██▒   ░██▒░▒█░    
-;;;;  ░ ▒░   ▒ ▒ ░▓  ░ ▒░   ░  ░ ▒ ░    
-;;;;  ░ ░░   ░ ▒░ ▒ ░░  ░      ░ ░      
-;;;;     ░   ░ ░  ▒ ░░      ░    ░ ░    
-;;;;           ░  ░         ░        
 ;;;; init
-;;;; @authors notidman <ognieff@yandex.ru>
-;;;; @url https://github.com/notidman/nimf
-;;;; @project-name nimf
+;;;; @authors ezbq <ognieff@yandex.ru>
+;;;; @url https://github.com/ezbq/nezim
+;;;; @project-name nezim
 ;;;; @date-start 09-15-22
 
 (each [_ modules (ipairs 

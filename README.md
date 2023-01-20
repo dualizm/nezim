@@ -1,5 +1,5 @@
 # nezim
-<p align="center"><img src="res/img/nimf.svg" alt="nimf"/></p>
+<p align="center"><img src="res/img/nezim.svg" alt="nezim"/></p>
 
 ## Introduction
 This project was created to provide a simple and powerful environment for working with code. Described entirely in fennel, the build provides convenient bindings for commands, but also an open API for user customization.
@@ -16,7 +16,7 @@ This project was created to provide a simple and powerful environment for workin
 2. install
 
 ```sh
-git clone  https://github.com/notidman/nimf.git ~/.config/nvim
+git clone  https://github.com/ezbq/nezim.git ~/.config/nvim
 ```
 3. build
 ```sh
